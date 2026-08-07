@@ -21,8 +21,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+shout out to this awesome people/sites for codes snippets, inspiration, and website help!
 * [turn.js](http://www.turnjs.com/#getting-started)
 * [ed crush](https://educrush.in/projects/image-hover-effect)
 * [glass morphism generator](https://hype4.academy/tools/glassmorphism-generator)
 * [greatstack](https://greatstack.dev/)
+* [domPizzie read me template](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc#file-readme-template-md)
