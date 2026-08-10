@@ -6,6 +6,7 @@ I created this website as a digital home for my mother and i's art, illustration
 Creative Chaos serves as both my personal art portfolio, a place to document the projects my mother and i are  working on, and a platform to launch our shop/promote our book.
 
 the website features:
+
 **Art Gallery/Art page**:- A collection of my paintings, drawings, illustrations, and other artwork
 
 **Current Projects** — Updates and information about my children's books and current creative projects
@@ -15,6 +16,7 @@ the website features:
 **Art Lessons Page** — Information about the art lessons and workshops I teach
 
 **About US** — A little more about me, my work, and the things I care about
+
 **Store** — A space for prints and other artwork(not yet open yet)
 
 
