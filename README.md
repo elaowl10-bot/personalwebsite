@@ -7,11 +7,16 @@ Creative Chaos serves as both my personal art portfolio, a place to document the
 
 the website features:
 **Art Gallery/Art page**:- A collection of my paintings, drawings, illustrations, and other artwork
+
 **Current Projects** — Updates and information about my children's books and current creative projects
+
 **Commissions Page** — Information about commissioning custom artwork
+
 **Art Lessons Page** — Information about the art lessons and workshops I teach
+
 **About US** — A little more about me, my work, and the things I care about
 **Store** — A space for prints and other artwork(not yet open yet)
+
 
 As my work changes, the website changes with it-- it will be subject to updates/reviisons.
 
