@@ -21,10 +21,14 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-shout out to this awesome people/sites for codes snippets, inspiration, and website help!
+shout out to this awesome people/sites for codes snippets, inspiration, fonts, and website help!
 * [turn.js](http://www.turnjs.com/#getting-started)
 * [ed crush](https://educrush.in/projects/image-hover-effect)
 * [glass morphism generator](https://hype4.academy/tools/glassmorphism-generator)
 * [greatstack](https://greatstack.dev/)
 * [domPizzie read me template](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc#file-readme-template-md)
 * [jquery](https://jquery.com/)
+* [richard sepsi-unageo font-](https://www.dafont.com/profile.php?user=1723735)
+* [ekobimantra(barber chop font)](https://ekobimantara.com/)
+* [typodermic fonts(Uchiyama Font)](https://typodermicfonts.com/)
+* 
