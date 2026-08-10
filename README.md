@@ -27,3 +27,4 @@ shout out to this awesome people/sites for codes snippets, inspiration, and webs
 * [glass morphism generator](https://hype4.academy/tools/glassmorphism-generator)
 * [greatstack](https://greatstack.dev/)
 * [domPizzie read me template](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc#file-readme-template-md)
+* [jquery](https://jquery.com/)
