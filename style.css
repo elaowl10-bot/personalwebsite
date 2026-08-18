@@ -15,17 +15,34 @@ img, video, .flip-card-front img, .card-image, .reveal-img, .art-card {
 }
 
 /* Make grids collapse on small screens */
-.gallery-grid, .card-grid, .card-grid2, .grid-container {
+.gallery-grid, .card-grid, .card-grid2, .grid-container, .store-layout, .about-layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
 }
 
+.about-layout .about-card {
+  width: 100% !important
+
+}
+
+.about-layout .polaroid .card {
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.store-heading .store-info {
+  margin:0 auto;
+}
+.store-layout {
+  margin: 0 auto;
+}
 /* Ensure flip-cards and cards are full width on narrow screens */
 .flip-card, .card {
   width: 100%;
   min-width: 0;
 }
+
 
 /* Responsive navigation: stack buttons and center logo */
 nav {
@@ -40,6 +57,7 @@ nav {
   flex: 0 1 auto;
   min-width: 120px;
 }
+
 
 /* Make interactive controls easier to tap */
 button, .card-btn, card-btn, .gallery-grid .view-full {
@@ -77,6 +95,15 @@ button, .card-btn, card-btn, .gallery-grid .view-full {
     text-align: center;
     z-index: 2;
   }
+    #artlessons-faq .accordion-content {
+  font-size: 10px;
+  margin:0 auto;
+  width:200px;
+  max-width: 200px;
+
+}
+  
+  
   #mainPage .swing {
     width: min(88vw, 340px) !important;
     height: auto !important;
@@ -88,6 +115,9 @@ button, .card-btn, card-btn, .gallery-grid .view-full {
   #nowAvailable {
     font-size: 13px;
     padding: 7px 10px;
+  }
+  #ap-portfolio #arrow {
+  display: none;
   }
   #mainPage #viewbtn {
     position: static !important;
@@ -476,8 +506,9 @@ h2
 }
 button {
   font-size: 30px;
-  border: 1px solid transparent;
+  border: 4px solid #144bba;
   outline: 1px solid transparent;
+  box-shadow:#144bba  4px 4px;
   background-color: #007bff;
   color: #73c9eb;
   display: inline-block;
@@ -524,9 +555,9 @@ img {
 
 button:hover {
   background-color: #FFF290;
-  border: 5px solid #14b1ff;
+  border: 4px solid #14b1ff;
    transform: rotate(-2deg) scale(1.05);
-  box-shadow: 0 10px 30px rgba(13, 133, 244, 0.368)
+  box-shadow: 4px 4px #14b1ff;
 }
 
 .radio-group {
@@ -558,8 +589,10 @@ input[type="radio"] {
 
 .active-page {
   background-color: #FFF290;
-  border: 5px solid #14b1ff; 
+  border: 4px solid #14b1ff; 
+  box-shadow: 4px 4px #14b1ff;
 }
+
 
 
 #artHeader {
@@ -1937,7 +1970,7 @@ align-items:center;
 
 justify-content:space-between;
 
-padding:20px 30px;
+padding:10px 20px;
 
 background:#bfedff;
 
@@ -1947,7 +1980,7 @@ border-radius:35px;
 
 cursor:pointer;
 
-font-size:28px;
+font-size:15px;
 
 font-family:"llewie";
 
@@ -2042,7 +2075,7 @@ text-align:left;
 
 font-family:"unageo reg";
 z-index:-5;
-font-size:18px;
+font-size:13px;
 
 }
 
@@ -2110,7 +2143,7 @@ border:4px solid #144bba;
 
 transition:.25s;
 
-font-size:22px;
+font-size:15px;
 
 }
 
@@ -2128,7 +2161,7 @@ border:4px solid #144bba;
 
 transition:.25s;
 
-font-size:22px;
+font-size:15px;
 
 }
 
@@ -2147,7 +2180,7 @@ border:4px solid #144bba;
 
 transition:.25s;
 
-font-size:22px;
+font-size:15px;
 
 }
 
@@ -2165,7 +2198,7 @@ border:4px solid #144bba;
 
 transition:.25s;
 
-font-size:22px;
+font-size:15px;
 
 }
 
@@ -2557,6 +2590,63 @@ color:#3e6ac1;
   display: grid;
   grid-template-columns: 1fr 1fr; 
   gap: 20px; 
+}
+.dual-container .column-left {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.dual-container .column-right {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.column-right .cute .card {
+ height:200px;
+  max-height: 300px;
+  margin: 0 auto;
+}
+/* Keep dual columns on desktop, but prevent right column overflow on smaller widths. */
+.dual-container,
+.dual-container .column-left,
+.dual-container .column-right {
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .dual-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .dual-container .column-left,
+  .dual-container .column-right {
+    padding: 16px;
+  }
+
+  .dual-container .column-right .gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 16px;
+  }
+
+  .dual-container .column-right .cutecard {
+    padding: 12px;
+  }
+
+  .dual-container .column-right .cutecard .card-image {
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .dual-container .column-right .cutecard .card-content {
+    padding: 12px;
+  }
+
+  .dual-container .column-right .cutecard .card-body {
+    margin: 0;
+    padding-left: 12px;
+    line-height: 1.35;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3598,7 +3688,7 @@ font-family:'llewie';
 
 .comission-txt {
   color: #36b2ff;
-  font-size:20px;
+  font-size:15px;
 text-align:left;
 padding:10px;
 }
@@ -3636,4 +3726,362 @@ color:#144bba;
   color:#0a1b3e;
   font-size:14px;
   padding:10px 10px;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  background: linear-gradient(270deg, #e8ff83 0%, #ffd297 100%);
+  margin: 20px;
+  padding: 20px;
+  border-radius:30px;
+  border: 4px solid #144bba;
+  position:relative
+}
+
+.about-layout .about-card {
+  min-width: 0;
+}
+
+.about-layout > div:last-child {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: stretch;
+  gap: 16px;
+}
+
+.about-layout > div:last-child .polaroid.card {
+  width: min(100%, 460px);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.about-layout > div:last-child .polaroid.card img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .about-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-layout .about-card {
+    width: 100%;
+  }
+
+  .about-layout > div:last-child {
+    width: 100%;
+    justify-content: flex-start;
+    align-self: start;
+    gap: 20px;
+  }
+
+  .about-layout > div:last-child .polaroid.card {
+    width: min(100%, 760px);
+  }
+}
+
+.about-header {
+  font-family: 'llewie';
+  color:#4cb5fa;
+  font-size:clamp(40px, 6vw, 80px);
+  text-align:center;
+  text-shadow: 4px 4px #140a84;
+  -webkit-text-stroke: 1px #140a84;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #88daeb, #42ea61);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color:transparent;
+}
+.about-text {
+  font-family: 'unageo reg';
+  color:#003670;
+  font-size:clamp(18px, 2vw, 20px);
+  text-align:left;
+margin-bottom:24px;
+}
+.about-card{
+  padding:20px;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(0deg, hsl(251, 100%, 95%) 0%, #f8fcff 100%);
+  border-radius:40px;
+  border: 4px solid #144bba;
+  box-shadow: 4px 4px #144bba;
+position:relative
+}
+
+.about-subheader {
+  font-family: 'uchiyama';
+  color:#a1e68e;
+    padding:10px;
+  font-size:clamp(30px, 4vw, 60px);
+  text-align:center;
+  text-shadow: 4px 4px #140a84;
+}
+
+.store-header {
+  font-family: 'Barberchop';
+  color:#fff0c4;
+  font-size:clamp(40px, 6vw, 80px);
+  text-align:center;
+  text-shadow: 4px 4px #305fd7;
+  -webkit-text-stroke: 1px #305fd7;
+}
+
+.store-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  align-items: start;
+  background: linear-gradient(270deg, #e8ff83 0%, #ffd297 100%);
+  padding: 20px;
+  margin: 0 auto;
+  width: min(100%, 1280px);
+  box-sizing: border-box;
+  position:relative;
+}
+
+.store-section {
+  background-color:#144bba;
+}
+
+.store-info {
+  font-family: 'handwriting';
+  color:#003670;
+  font-size:clamp(18px, 2vw, 20px);
+  margin-left: 400px;
+  margin-right: 400px;
+  text-align:left;
+  padding:20px;
+}
+.store-heading {
+  margin: 0;
+  padding:20px;
+  background-color: #f89292;
+}
+.store-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.store-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 44px;
+  border: 4px solid #144bba;
+  overflow: hidden;
+}
+
+.store-disclaimer {
+  font-family: 'unageo sem-bold';
+  color:#0d529b;
+  font-size:clamp(16px, 1.5vw, 20px);
+  text-align:center;
+  background-image:linear-gradient(270deg, #f89292 0%, #ffb672 100%);
+  box-shadow: 2px 2px #144bba;
+  border-radius:20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom:5px;
+  border: 3px solid #144bba;
+  z-index:5;
+  position:absolute;
+  top: -14px;
+  left: 16px;
+  transform: rotate(-10deg);
+  margin: 0;
+  max-width: calc(100% - 32px);
+
+}
+.store-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  flex: 0 0 auto;
+}
+
+.item-description {
+  font-family: 'unageo reg';
+  color:#003670;
+  font-size:clamp(16px, 1.5vw, 18px);
+  text-align:center;
+  padding:10px 0 0;
+  margin: 0;
+}
+.store-card .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; 
+}
+
+
+
+
+.store-card:hover .img-hover {
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .dual-container .column-right .gallery-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: start;
+  }
+
+  .dual-container .column-right .card.cutecard {
+    justify-content: flex-start !important;
+    padding: 10px !important;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .dual-container .column-right p,  .dual-container .column-right .subtext {
+   font-size: 15px !important;
+  }
+
+  .dual-container .column-right .glass p, .column-left .print-note p {
+    font-size: 12px !important;
+  }
+
+  .dual-container .column-right .card.cutecard .card-image {
+    height: 110px !important;
+    min-height: 110px;
+    object-fit: cover;
+  }
+
+  .dual-container .column-right .card.cutecard .card-content {
+    padding: 10px !important;
+  }
+
+  .dual-container .column-right .card.cutecard .card-body {
+    margin: 0 !important;
+    padding-left: 12px !important;
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+    display: -webkit-box;
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .dual-container .column-right .glass {
+    padding: 12px !important;
+    max-height: 360px;
+    overflow-y: auto;
+  }
+
+  .dual-container .column-left .print-note {
+    padding: 14px !important;
+    max-height: 340px;
+    overflow-y: auto;
+  }
+
+  .dual-container .column-left .print-note .hero-title {
+    margin: 0 0 8px;
+    font-size: clamp(30px, 5vw, 46px) !important;
+    line-height: 1.05;
+  }
+
+  .dual-container .column-left .polaroid.card {
+    width: min(320px, 100%);
+    padding: 12px 12px 38px;
+  }
+
+  .dual-container .column-left .polaroid-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .dual-container .column-left .polaroid-caption {
+    font-size: 24px;
+    padding-top: 10px;
+  }
+
+  #lesson-materials p[style*="padding-left:200px"],
+  #lesson-materials p[style*="padding-right:200px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
+  }
+
+  #lesson-materials ul[style*="padding-left:300px"] {
+    padding-left: 34px !important;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  #lesson-materials .grid-container-twocolmn,
+  #lesson-materials .grid-container-twocolm {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px;
+  }
+
+  #lesson-materials .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #lesson-materials .glass.card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  #lesson-materials .linksmol {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 760px) {
+  #lesson-materials {
+    padding: 16px 10px;
+  }
+
+  #lesson-materials h1 {
+    font-size: clamp(30px, 8vw, 44px);
+  }
+
+  #lesson-materials p[style*="padding-left:200px"],
+  #lesson-materials p[style*="padding-right:200px"] {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  #lesson-materials ul[style*="padding-left:300px"] {
+    padding-left: 22px !important;
+    padding-right: 10px;
+  }
+}
+
+#store-section {
+  background-color:#144bba;
+  
 }
